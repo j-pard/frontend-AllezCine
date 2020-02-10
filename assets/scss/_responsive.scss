@@ -1,0 +1,9 @@
+$smallScreen: 640px;
+$medium-downScreen: 768px;
+$medium-upScreen: 1024px;
+$largeScreen: 1240px;
+
+$small: "only screen and (min-width: #{$smallScreen})";
+$medium-down: "only screen and (min-width: #{$medium-downScreen})";
+$medium-up: "only screen and (min-width: #{$medium-upScreen})";
+$large: "only screen and (min-width: #{$largeScreen})";
