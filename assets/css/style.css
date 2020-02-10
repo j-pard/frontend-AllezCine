@@ -8,5 +8,8 @@ body {
   width: 100%; }
 
 /*# sourceMappingURL=style.css.map */
+body footer section#footer-lists div.row div.col {
+  border: 1px solid black;
+  min-height: 300px; }
 
 /*# sourceMappingURL=style.css.map */
