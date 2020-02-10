@@ -1,12 +1,44 @@
 * {
   padding: 0;
   margin: 0;
-  outline: none; }
+  outline: none;
+}
 
 body {
   overflow-x: hidden;
-  width: 100%; }
+  width: 100%;
+}
 
 /*# sourceMappingURL=style.css.map */
+#headerFooterList {
+  list-style: none;
+  background-color: #fc443C;
+}
+
+#navigation-fixed {
+  position: fixed;
+  background-color: none;
+  z-index: 9999;
+}
+
+.carousel-item {
+  height: 100vh;
+  min-height: 350px;
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-color: #000;
+}
+
+.redLetters {
+  color: #fc443C;
+}
+
+.jumbotron {
+  padding: 0;
+  margin: 0;
+}
 
 /*# sourceMappingURL=style.css.map */
