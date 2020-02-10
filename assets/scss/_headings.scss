@@ -1,0 +1,21 @@
+footer {
+      h3 {
+            color: $white;
+            span {
+                  color: $red;
+            }
+      }
+
+      h3.mb30 {
+            margin-bottom: 30px;
+      }
+
+      h3.red {
+            color: $red
+      }
+      h4 {
+            color: $white;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+      }
+}

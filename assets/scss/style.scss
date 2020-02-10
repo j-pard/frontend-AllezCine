@@ -2,17 +2,112 @@
 @import "_mixins.scss";
 @import "_responsive.scss";
 @import "_colors.scss";
+@import "_headings.scss";
 
 
 body {
       
       footer {
+            background-color: $black;
+            padding: 50px;
+
+            section#newsletters {
+                  margin-bottom: 50px;
+
+                  div {
+                        div {
+                              input {
+                                    height: 40px;
+                                    width: 400px;
+                                    padding-left: 20px;
+                              }
+                              button {
+                                    height: 40px;
+                              }
+                        }
+                  }
+            }
+
             section#footer-lists {
+                  border-bottom: 2px solid $gray;
+                  margin-bottom: 50px;
+                  padding-bottom: 25px;
                   div.row {
                         div.col {
-                              border: 1px solid black;
                               min-height: 300px;
+                              ul {
+                                    list-style: none;
+                                    li {
+                                          color: $gray;
+                                    }
+                              }
+
+                              ul#footer-latest {
+                                    li {
+                                          img {
+                                                display: inline-block;
+                                                margin-right: 20px;
+                                          }
+                                          p {
+                                                display: inline-block;
+                                          }
+                                    }
+                              }
+
+                              ul#footer-genres {
+                                    li {
+                                          display: inline-block;
+                                          color: $white;
+                                          background-color: $gray;
+                                          padding: 5px 8px;
+                                          border-radius: 3px;
+                                          margin: 3px 1.5px;
+                                          cursor: pointer;
+                                          transition: all .3s;
+                                    }
+
+                                    li:hover {
+                                          transform: scale(1.1);
+                                    }
+                              }
                         }
+                  }
+            }
+
+            section#connect-us {
+                  border-top: 2px solid $gray;
+                  margin-top: 50px;
+                  padding-top: 25px;
+                  div {
+                        div {
+                              div#arrow-up {
+                                    height: 60px;
+                                    width: 60px;
+      
+                                    border: 3px solid $red;
+                                    border-radius: 50px;
+                                    i {
+                                          color: $white;
+                                          font-size: 50px;
+                                          font-weight: bold;
+                                    }
+                              }
+                              button {
+                                    width: 45px;
+                                    height: 45px;
+                                    background-color: transparent;
+                                    color: $white;
+                                    border: 1px solid $gray;
+                                    font-size: 20px;
+                                    margin: 2px;
+                                    transition: all .3s;
+                              }
+
+                              button:hover {
+                                    transform: scale(1.1);
+                              }
+                        }
+                        
                   }
             }
       

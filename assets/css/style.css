@@ -8,8 +8,79 @@ body {
   width: 100%; }
 
 /*# sourceMappingURL=style.css.map */
-body footer section#footer-lists div.row div.col {
-  border: 1px solid black;
-  min-height: 300px; }
+footer h3 {
+  color: #FFFFFF; }
+  footer h3 span {
+    color: #fc443C; }
+footer h3.mb30 {
+  margin-bottom: 30px; }
+footer h3.red {
+  color: #fc443C; }
+footer h4 {
+  color: #FFFFFF;
+  text-transform: uppercase;
+  margin-bottom: 30px; }
+
+body footer {
+  background-color: #0D0D0D;
+  padding: 50px; }
+  body footer section#newsletters {
+    margin-bottom: 50px; }
+    body footer section#newsletters div div input {
+      height: 40px;
+      width: 400px;
+      padding-left: 20px; }
+    body footer section#newsletters div div button {
+      height: 40px; }
+  body footer section#footer-lists {
+    border-bottom: 2px solid #494D4E;
+    margin-bottom: 50px;
+    padding-bottom: 25px; }
+    body footer section#footer-lists div.row div.col {
+      min-height: 300px; }
+      body footer section#footer-lists div.row div.col ul {
+        list-style: none; }
+        body footer section#footer-lists div.row div.col ul li {
+          color: #494D4E; }
+      body footer section#footer-lists div.row div.col ul#footer-latest li img {
+        display: inline-block;
+        margin-right: 20px; }
+      body footer section#footer-lists div.row div.col ul#footer-latest li p {
+        display: inline-block; }
+      body footer section#footer-lists div.row div.col ul#footer-genres li {
+        display: inline-block;
+        color: #FFFFFF;
+        background-color: #494D4E;
+        padding: 5px 8px;
+        border-radius: 3px;
+        margin: 3px 1.5px;
+        cursor: pointer;
+        transition: all .3s; }
+      body footer section#footer-lists div.row div.col ul#footer-genres li:hover {
+        transform: scale(1.1); }
+  body footer section#connect-us {
+    border-top: 2px solid #494D4E;
+    margin-top: 50px;
+    padding-top: 25px; }
+    body footer section#connect-us div div div#arrow-up {
+      height: 60px;
+      width: 60px;
+      border: 3px solid #fc443C;
+      border-radius: 50px; }
+      body footer section#connect-us div div div#arrow-up i {
+        color: #FFFFFF;
+        font-size: 50px;
+        font-weight: bold; }
+    body footer section#connect-us div div button {
+      width: 45px;
+      height: 45px;
+      background-color: transparent;
+      color: #FFFFFF;
+      border: 1px solid #494D4E;
+      font-size: 20px;
+      margin: 2px;
+      transition: all .3s; }
+    body footer section#connect-us div div button:hover {
+      transform: scale(1.1); }
 
 /*# sourceMappingURL=style.css.map */
