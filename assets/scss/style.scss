@@ -106,6 +106,27 @@ body {
                               button:hover {
                                     transform: scale(1.1);
                               }
+
+                              #facebook-btn:hover {
+                                    color: $facebook;
+                                    border-color: $facebook;
+                              }
+                              #twitter-btn:hover {
+                                    color: $twitter;
+                                    border-color: $twitter;
+                              }
+                              #linkedin-btn:hover {
+                                    color: $linkedIn;
+                                    border-color: $linkedIn;
+                              }
+                              #youtube-btn:hover {
+                                    color: $youtube;
+                                    border-color: $youtube;
+                              }
+                              #google-plus-btn:hover {
+                                    color: $google-plus;
+                                    border-color: $google-plus;
+                              }
                         }
                         
                   }

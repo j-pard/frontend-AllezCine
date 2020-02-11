@@ -11,3 +11,4 @@ Black       | #0D0D0D
 Gray        | #494D4E  
 White       | #FFFFFF  
 Lightgray   | #F2F0F1  
+Youtube     | #FF0000

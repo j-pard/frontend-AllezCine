@@ -82,5 +82,20 @@ body footer {
       transition: all .3s; }
     body footer section#connect-us div div button:hover {
       transform: scale(1.1); }
+    body footer section#connect-us div div #facebook-btn:hover {
+      color: #3b5998;
+      border-color: #3b5998; }
+    body footer section#connect-us div div #twitter-btn:hover {
+      color: #00acee;
+      border-color: #00acee; }
+    body footer section#connect-us div div #linkedin-btn:hover {
+      color: #0e76a8;
+      border-color: #0e76a8; }
+    body footer section#connect-us div div #youtube-btn:hover {
+      color: #FF0000;
+      border-color: #FF0000; }
+    body footer section#connect-us div div #google-plus-btn:hover {
+      color: #dd4b39;
+      border-color: #dd4b39; }
 
 /*# sourceMappingURL=style.css.map */
