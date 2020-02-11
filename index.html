@@ -73,7 +73,7 @@
                                     <div class="carousel-caption" id="slideOne">
                                           <h2 class="h2Header">Lastest <span class="redLetters">on</span>line <span class="redLetters">mo</span>vie</h2>
                                           <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                                          <p><a class="btn btn-lg btn-danger" href="#" role="button">Watch trailer</a></p>
+                                          <p><a class="btn btn-lg btn-danger text-uppercase" href="#" role="button">Watch trailer</a></p>
                                     </div>
                               </div>
                         </div>
@@ -83,7 +83,7 @@
                                     <div class="carousel-caption">
                                           <h2 class="h2Header">Lastest <span class="redLetters">on</span>line <span class="redLetters">mo</span>vie</h2>
                                           <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                                          <p><a class="btn btn-lg btn-alert" href="#" role="button">Watch trailer</a></p>
+                                          <p><a class="btn btn-lg btn-danger text-uppercase" href="#" role="button">Watch trailer</a></p>
                                     </div>
                               </div>
                         </div>
@@ -92,7 +92,7 @@
                                     <div class="carousel-caption">
                                           <h2 class="h2Header">Lastest <span class="redLetters">on</span>line <span class="redLetters">mo</span>vie</h2>
                                           <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                                          <p><a class="btn btn-lg btn-alert" href="#" role="button">Watch trailer</a></p>
+                                          <p><a class="btn btn-lg btn-danger text-uppercase" href="#" role="button">Watch trailer</a></p>
                                     </div>
                               </div>
                         </div>
@@ -228,9 +228,21 @@
 
 
       <main>
-            <section id="top-movies" class="galleries p-3"></section>
-            <section id="featured-movies" class="galleries"></section>
+            <section id="top-movies" class="galleries p-3 col-9"></section>
+
+            <h3 class="text-uppercase">Featured Movies</h3>
+            <div id="btns-container" class="galleries col-9 mt-4 mb-4">
+                  <button class="btn btn-lg btn-danger">All</button>
+                  <button class="btn btn-lg btn-filter-off">Action</button>
+                  <button class="btn btn-lg btn-filter-off">Policier</button>
+            </div>
+            <section id="featured-movies" class="galleries col-10"></section>
+            <div class="container-fluid text-center">
+                  <button id="btn-load-more" class="btn btn-lg btn-danger m-5 text-uppercase">Load more</button>
+            </div>
+
             <section id="shop-movies" class="galleries"></section>
+
             <section id="contact-us"></section>
       </main>
 
@@ -332,7 +344,7 @@
             <section id="connect-us" class="container-fluid">
                   <div class="row text-center">
                         <div class="col-1"></div>
-                        <h3 class="col">Connect us</h3>
+                        <h3 class="col text-uppercase">Connect us</h3>
                         <div class="col-1">
                               <div id="arrow-up"><img src="assets/img/up-arrow.png" alt=""></div>
                         </div>
@@ -352,14 +364,14 @@
       <template id="template">
             <article class="movie-container container p-0 m-2">
                   <div class="affiche p-0">
-                        <p class="text-center p-2 font-weight-bold">Adult</p>
+                        <p class="text-center p-2 font-weight-bold">Training</p>
                   </div>
                   <div class="row bottom-movie p-0 m-0">
-                        <h4 class="col text-center p-2">La pharmacienne</h4>
+                        <h4 class="col text-center p-2">BeCode Keller 1.18</h4>
                   </div>
                   <div class="row bottom-movie p-0 m-0">
-                        <div class="col-6 year text-left pl-3 pt-2">2019</div>
-                        <div class="col-6 price text-right pr-1 pt-2">14.95€</div>
+                        <div class="col-6 year text-left pl-3 pt-2">2020</div>
+                        <div class="col-6 price text-right pr-1 pt-2"></div>
                   </div>
             </article>
       </template>

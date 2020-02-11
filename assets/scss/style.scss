@@ -145,20 +145,43 @@ body {
       //MAIN
 
       main {
+
             .galleries {
                   display: flex;
                   flex-direction: row;
                   flex-wrap: wrap;
-                  justify-content: space-around;
                   align-items: center;
+                  // width: 1300px;
+                  margin: 0 auto;
+            }
 
-                  width: 70%;
+            #top-movies {
+                  justify-content: space-around;
                   margin: 50px auto;
                   border: 3px solid $lightgray;
             }
 
+            div#btns-container {
+                  
+                  button {
+                        margin: 5px 2.5px;
+                        width: 100px;
+                  }
+                  button.btn-filter-off {
+                        background-color: $lightgray;
+                  }
+            }
+
+            section#featured-movies {
+                  justify-content: center;
+            }
+
+            #btn-load-more {
+                  width: 180px;
+            }
+
             .movie-container {
-                  width: 220px;
+                  width: 200px;
                   height: 350px;
                   display: flex;
                   flex-direction: column;

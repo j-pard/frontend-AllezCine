@@ -11,6 +11,11 @@ body {
 .movie-container h4 {
   font-size: 18px; }
 
+main h3 {
+  border-left: 5px solid #fc443C;
+  padding: 8px 0 8px 15px;
+  margin-left: 100px; }
+
 footer h3 {
   color: #FFFFFF; }
   footer h3 span {
@@ -118,13 +123,23 @@ body main .galleries {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-around;
   align-items: center;
-  width: 70%;
+  margin: 0 auto; }
+body main #top-movies {
+  justify-content: space-around;
   margin: 50px auto;
   border: 3px solid #F2F0F1; }
+body main div#btns-container button {
+  margin: 5px 2.5px;
+  width: 100px; }
+body main div#btns-container button.btn-filter-off {
+  background-color: #F2F0F1; }
+body main section#featured-movies {
+  justify-content: center; }
+body main #btn-load-more {
+  width: 180px; }
 body main .movie-container {
-  width: 220px;
+  width: 200px;
   height: 350px;
   display: flex;
   flex-direction: column;
