@@ -1,7 +1,18 @@
 ( () => {
-      const KEY = "7f7e0630f2410d5c2d9f0a18fc195d27";
+      const TOP_MOVIES = document.getElementById("top-movies");
       const TEMPLATE = document.getElementById("template");
+      
+      const KEY = "7f7e0630f2410d5c2d9f0a18fc195d27";
       let popularMovies = [];
+
+      const createArticle = (target, source) => {
+            let affiche = document.importNode(TEMPLATE.content, true);
+            affiche.querySelector("article div p").textContent = source.genre;
+            affiche.querySelector("article div h4").textContent = source.title;
+            affiche.querySelector("article div .year").textContent = source.release;
+            affiche.querySelector("article div .price").textContent = "";
+            target.appendChild(affiche);
+      }
 
       const getPopular = async (url, number) => {
             const RESPONSE = await fetch(url);
@@ -20,10 +31,11 @@
                         backdrop: `https://image.tmdb.org/t/p/w400${DATA.backdrop_path}`,
                         poster: `https://image.tmdb.org/t/p/w400${DATA.poster_path}`,
                         genre: DATA.genres[0].name,
-                        release: DATA.release_date,
+                        release: DATA.release_date.split("-").splice(0, 1),
                         trailer: TRAILER
                   }
                   popularMovies.push(MOVIE);
+                  createArticle(TOP_MOVIES, MOVIE);
             });
             console.log(popularMovies);
       }
