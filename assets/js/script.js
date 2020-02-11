@@ -1,7 +1,14 @@
 ( () => {
+
+      // cookie
+
+      $('#cookieModal').modal('show');
+
+      // Movie gestion
+
       const TOP_MOVIES = document.getElementById("top-movies");
       const TEMPLATE = document.getElementById("template");
-      
+
       const KEY = "7f7e0630f2410d5c2d9f0a18fc195d27";
       let popularMovies = [];
 
@@ -20,7 +27,7 @@
             const DATA = await RESPONSE.json();
             const RESULTS = await DATA.results;
             const POPULAR_MOVIES = RESULTS.splice(0, number);
-            
+
             POPULAR_MOVIES.forEach(async movie => {
                   const RESPONSE = await fetch(`https://api.themoviedb.org/3/movie/${movie.id}?api_key=${KEY}`);
                   const DATA = await RESPONSE.json();
