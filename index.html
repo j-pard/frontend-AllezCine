@@ -113,10 +113,110 @@
                   <ul id="headerFooterList" class="p-2">
                         <li class="headerFooterItems"><i class="fas fa-phone-alt"></i></li>
                         <li class="headerFooterItems">000-000/000-000</li>
-                        <li class="headerFooterItems"><button type="button" class="btn btn-dark ml-5">Login</button></li>
-                        <li class="headerFooterItems"><button type="button" class="btn btn-dark">Register</button></li>
+                        <li class="headerFooterItems"><button type="button" class="btn btn-dark ml-5" data-toggle="modal" data-target="#login">Login</button></li>
+                        <li class="headerFooterItems"><button type="button" class="btn btn-dark" data-toggle="modal" data-target="#register">Register</button></li>
                   </ul>
             </div>
+
+            <!-- Formulaire Login/register -->
+
+            <!-- Login -->
+
+            <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                        <div class="modal-header">
+                              <h5 class="modal-title" id="loginTitle">Login</h5>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                              </button>
+                        </div>
+                        <div class="modal-body">
+                              <form action="">
+                                    <div class="form-group">
+                                          <label for="username-email">E-mail or Username</label>
+                                          <input value='' id="username-email" placeholder="E-mail or Username" type="text" class="form-control" required/>
+                                    </div>
+                                    <div class="form-group">
+                                          <label for="password">Password</label>
+                                          <input id="password" value='' placeholder="Password" type="text" class="form-control" required/>
+                                    </div>
+                                    <div class="input-group">
+                                    <div class="checkbox">
+                                          <label>
+                                          <input id="login-remember" type="checkbox" name="remember" value="1"> Remember me
+                                          </label>
+                                    </div>
+                                    </div>
+                                    <div class="form-group">
+                                          <input type="submit" class="btn btn-default btn-login-submit btn-secondary btn-block m-t-md" value="Login" />
+                                    </div>
+                                    <span class='text-center'><a href="/resetting/request" class="text-sm">Forgot Password?</a></span>
+                                    <div class="form-group">
+                                          <p class="text-center m-t-xs text-sm">Do not have an account?</p>
+                                          <a href="" class="btn btn-default btn-block btn-secondary m-t-md">Create an account</a>
+                                    </div>
+                              </form>
+                        </div>
+                        <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                  </div>
+                  </div>
+            </div>
+
+
+            <!-- Register -->
+
+            <div class="modal fade" id="register" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                        <div class="modal-header">
+                              <h5 class="modal-title" id="registerTitle">Register</h5>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                              </button>
+                        </div>
+                        <div class="modal-body">
+                              <form action="">
+                                    <div class="form-group">
+                                          <label for="username-email">Username</label>
+                                          <input value='' id="username-email" placeholder="Username" type="text" class="form-control" required/>
+                                    </div>
+                                    <div class="form-group">
+                                          <label for="username-email">Mail</label>
+                                          <input value='' id="username-email" placeholder="E-mail" type="email" class="form-control" required/>
+                                    </div>
+                                    <div class="form-group">
+                                          <label for="password">Password</label>
+                                          <input id="password" value='' placeholder="Password" type="text" class="form-control" required/>
+                                    </div>
+                                    <div class="form-group">
+                                          <label for="password">Confirm password</label>
+                                          <input id="password" value='' placeholder="Confirm password" type="text" class="form-control" required/>
+                                    </div>
+                                    <div class="form-group">
+                                          <input type="submit" class="btn btn-default btn-login-submit btn-secondary btn-block m-t-md" value="Terms of use" />
+                                    </div>
+                                    <div class="input-group">
+                                    <div class="checkbox">
+                                          <label>
+                                          <input type="checkbox" name="checkCn" value="1" class="mb-3" required> Accept the terms of use.
+                                          </label>
+                                    </div>
+                                    </div>
+                                    <div class="form-group">
+                                          <a href="" class="btn btn-default btn-block btn-secondary m-t-md">Create an account</a>
+                                    </div>
+                              </form>
+                        </div>
+                        <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                  </div>
+                  </div>
+            </div>
+
       </header>
 
       <div id="socials">
@@ -265,5 +365,6 @@
       </template>
 
       <script src="./assets/js/script.js"></script>
+
 </body>
 </html>
