@@ -11,6 +11,7 @@
             affiche.querySelector("article div h4").textContent = source.title;
             affiche.querySelector("article div .year").textContent = source.release;
             affiche.querySelector("article div .price").textContent = "";
+            affiche.querySelector(".affiche").style.backgroundImage = `url("${source.poster}")`;
             target.appendChild(affiche);
       }
 
