@@ -1,16 +1,13 @@
 * {
   padding: 0;
   margin: 0;
-  outline: none;
-}
+  outline: none; }
 
 body {
   overflow-x: hidden;
-  width: 100%;
-}
+  width: 100%; }
 
 /*# sourceMappingURL=style.css.map */
-<<<<<<< HEAD
 footer h3 {
   color: #FFFFFF; }
   footer h3 span {
@@ -24,6 +21,45 @@ footer h4 {
   text-transform: uppercase;
   margin-bottom: 30px; }
 
+body #logo-top {
+  font-size: 50px; }
+body #nav-search {
+  background: url("http://kodyrabatowe.wp.pl/img/ico/search_gr.png") top left no-repeat;
+  height: 30px;
+  padding-left: 25px; }
+body #headerFooter {
+  background-color: #fc443C; }
+body #headerFooterList {
+  list-style: none; }
+body #navigation-fixed {
+  position: fixed;
+  background-color: none;
+  z-index: 9999; }
+body #slideOne {
+  background-image: url("./assets/ressources/54bf67b9a6ec145fc04eebc2481ba.jpeg"); }
+body .h2Header {
+  font-size: 45px;
+  text-transform: uppercase; }
+body .carousel-item {
+  height: 100vh;
+  min-height: 350px;
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-color: #000; }
+body .redLetters {
+  color: #fc443C; }
+body .jumbotron {
+  padding: 0;
+  margin: 0; }
+body .headerFooterItems {
+  display: inline-block;
+  color: #FFFFFF;
+  vertical-align: middle;
+  font-size: 20px;
+  padding: auto 15px; }
 body div#socials {
   cursor: pointer;
   position: fixed;
@@ -119,12 +155,12 @@ body footer {
     body footer section#connect-us div div div#arrow-up {
       height: 60px;
       width: 60px;
+      padding-top: 10px;
       border: 3px solid #fc443C;
       border-radius: 50px; }
-      body footer section#connect-us div div div#arrow-up i {
-        color: #FFFFFF;
-        font-size: 50px;
-        font-weight: bold; }
+      body footer section#connect-us div div div#arrow-up img {
+        width: auto;
+        height: 70%; }
     body footer section#connect-us div div button {
       width: 45px;
       height: 45px;
@@ -151,67 +187,5 @@ body footer {
     body footer section#connect-us div div #google-plus-btn:hover {
       color: #dd4b39;
       border-color: #dd4b39; }
-=======
-#logo-top {
-  font-size: 50px;
-}
-
-#nav-search {
-  background: url("http://kodyrabatowe.wp.pl/img/ico/search_gr.png") top left no-repeat;
-  height: 30px;
-  padding-left: 25px;
-}
-
-#headerFooter {
-  background-color: #fc443C;
-}
-
-#headerFooterList {
-  list-style: none;
-}
-
-#navigation-fixed {
-  position: fixed;
-  background-color: none;
-  z-index: 9999;
-}
-
-#slideOne {
-  background-image: url("./assets/ressources/54bf67b9a6ec145fc04eebc2481ba.jpeg");
-}
-
-.h2Header {
-  font-size: 45px;
-  text-transform: uppercase;
-}
-
-.carousel-item {
-  height: 100vh;
-  min-height: 350px;
-  background: no-repeat center center scroll;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  background-color: #000;
-}
-
-.redLetters {
-  color: #fc443C;
-}
-
-.jumbotron {
-  padding: 0;
-  margin: 0;
-}
-
-.headerFooterItems {
-  display: inline-block;
-  color: #FFFFFF;
-  vertical-align: middle;
-  font-size: 20px;
-  padding: auto 15px;
-}
->>>>>>> header
 
 /*# sourceMappingURL=style.css.map */
