@@ -6,6 +6,78 @@
 
 
 body {
+
+      div#socials {
+            cursor: pointer;
+            position: fixed;
+            top: 50%;
+            left: 0;
+            z-index: 9999;
+
+            .social-slider {
+                  width: 200px;
+                  height: 60px;
+                  margin: 5px 0;
+                  padding: 5px 15px;
+                  border-radius: 0 50px 50px 0;
+
+                  color: #fff;
+                  font-weight: bold;
+                  font-size: 22px;
+
+                  display: flex;
+                  flex-direction: row;
+                  flex-wrap: nowrap;
+                  justify-content: space-between;
+                  align-items: center;
+
+                  transform: translateX(-140px);
+                  transition: all .4s;
+
+                  .i-cont {
+                        background-color: #fff;
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 40px;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: center;
+                        align-items: center;
+                        i {
+                              font-size: 22px;
+                        }
+                  }
+            }
+
+            .social-slider:hover {
+                  transform: translateX(0);
+            }
+
+            #social-twitter {
+                  background-color: $twitter;
+                  i {
+                        color: $twitter;
+                  }
+            }
+            #social-facebook {
+                  background-color: $facebook;
+                  i {
+                        color: $facebook;
+                  }
+            }
+            #social-dribbble {
+                  background-color: $dribbble;
+                  i {
+                        color: $dribbble;
+                  }
+            }
+            #social-google-plus {
+                  background-color: $google-plus;
+                  i {
+                        color: $google-plus;
+                  }
+            }
+      }
       
       footer {
             background-color: $black;
