@@ -11,6 +11,7 @@
       <meta name="Description" content="Project for movies seller">
       <script src="https://kit.fontawesome.com/126bbe9047.js" crossorigin="anonymous"></script>
       <!-- bootstrap -->
+      <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
       <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
@@ -18,17 +19,103 @@
       <title>ALLEZCINE!</title>
 </head>
 <body>
-      <header class="jumbotron">
-            <nav>
-
+      <header class="jumbotron m-0 p-0">
+            <nav class="navbar navbar-expand-md navbar-dark container" id="navigation-fixed">
+                  <h1 class="navbar-brand" href="#" id="logo-top"><span class="redLetters">ALLEZ</span>CINE!</h1>
+                  <button id="hamburger" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                        <ul class="navbar-nav mr-auto">
+                              <li class="nav-item active">
+                                    <a class="nav-link  mt-0 pt-0" href="#">Home <span class="sr-only">(current)</span></a>
+                              </li>
+                              <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle  mt-0 pt-0" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Genre</a>
+                              <div class="dropdown-menu" aria-labelledby="dropdown01">
+                                    <a class="dropdown-item" href="#">Action</a>
+                                    <a class="dropdown-item" href="#">Comedy</a>
+                                    <a class="dropdown-item" href="#">Western</a>
+                                    <a class="dropdown-item" href="#">Fiction</a>
+                              </div>
+                              </li>
+                              <li class="nav-item">
+                                    <a class="nav-link ml-2 mt-0 pt-0" href="#">*****</a>
+                              </li>
+                              <li class="nav-item">
+                                    <a class="nav-link ml-2  mt-0 pt-0" href="#">*****</a>
+                              </li>
+                              <li class="nav-item">
+                                    <a class="nav-link ml-2  mt-0 pt-0" href="#">*****</a>
+                              </li>
+                              <li class="nav-item">
+                                    <a class="nav-link ml-2 mt-0 pt-0" href="#">Contact</a>
+                              </li>
+                        </ul>
+                        <form class="form-inline my-2 my-lg-0">
+                              <input id="nav-search" class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                              <i class="fas fa-search"></i>
+                        </form>
+                  </div>
             </nav>
 
-            <section>
+            <!-- carousel -->
 
-            </section>
+            <div id="carouselHeader" class="carousel slide" data-ride="carousel">
+                  <ol class="carousel-indicators">
+                        <li data-target="#carouselHeader" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselHeader" data-slide-to="1"></li>
+                        <li data-target="#carouselHeader" data-slide-to="2"></li>
+                  </ol>
+                  <div class="carousel-inner" role="listbox">
+                        <div class="carousel-item active" >
+                              <div class="container">
+                                    <div class="carousel-caption" id="slideOne">
+                                          <h2 class="h2Header">Lastest <span class="redLetters">on</span>line <span class="redLetters">mo</span>vie</h2>
+                                          <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                                          <p><a class="btn btn-lg btn-danger" href="#" role="button">Watch trailer</a></p>
+                                    </div>
+                              </div>
+                        </div>
 
-            <div>
+                        <div class="carousel-item" id="slideTwo">
+                              <div class="container">
+                                    <div class="carousel-caption">
+                                          <h2 class="h2Header">Lastest <span class="redLetters">on</span>line <span class="redLetters">mo</span>vie</h2>
+                                          <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                                          <p><a class="btn btn-lg btn-alert" href="#" role="button">Watch trailer</a></p>
+                                    </div>
+                              </div>
+                        </div>
+                        <div class="carousel-item" id="slideThree">
+                              <div class="container">
+                                    <div class="carousel-caption">
+                                          <h2 class="h2Header">Lastest <span class="redLetters">on</span>line <span class="redLetters">mo</span>vie</h2>
+                                          <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                                          <p><a class="btn btn-lg btn-alert" href="#" role="button">Watch trailer</a></p>
+                                    </div>
+                              </div>
+                        </div>
+                  </div>
+                  <a class="carousel-control-prev" href="#carouselHeader" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                  </a>
+                  <a class="carousel-control-next" href="#carouselHeader" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                  </a>
+            </div>
 
+            <!--  header-footer -->
+
+            <div id="headerFooter" class="container-fluid">
+                  <ul id="headerFooterList" class="p-2">
+                        <li class="headerFooterItems"><i class="fas fa-phone-alt"></i></li>
+                        <li class="headerFooterItems">000-000/000-000</li>
+                        <li class="headerFooterItems"><button type="button" class="btn btn-dark ml-5">Login</button></li>
+                        <li class="headerFooterItems"><button type="button" class="btn btn-dark">Register</button></li>
+                  </ul>
             </div>
       </header>
 

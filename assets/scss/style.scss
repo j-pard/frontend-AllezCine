@@ -78,7 +78,7 @@ body {
                   }
             }
       }
-      
+
       footer {
             background-color: $black;
             padding: 50px;
@@ -155,7 +155,7 @@ body {
                               div#arrow-up {
                                     height: 60px;
                                     width: 60px;
-      
+
                                     border: 3px solid $red;
                                     border-radius: 50px;
                                     i {
@@ -200,9 +200,73 @@ body {
                                     border-color: $google-plus;
                               }
                         }
-                        
+
                   }
             }
-      
+
       }
+
+// ID
+
+#logo-top {
+    font-size: 50px;
+}
+
+#nav-search {
+    background: url("http://kodyrabatowe.wp.pl/img/ico/search_gr.png") top left     no-repeat;
+    height:30px;
+    padding-left:25px;
+
+}
+
+#headerFooter {
+    background-color: $red;
+}
+
+#headerFooterList {
+    list-style: none;
+}
+
+#navigation-fixed {
+    position: fixed;
+    background-color: none;
+    z-index: 9999;
+}
+
+#slideOne {
+    background-image: url('./assets/ressources/54bf67b9a6ec145fc04eebc2481ba.jpeg');
+}
+// CLASSE
+
+.h2Header {
+    font-size: 45px;
+    text-transform: uppercase;
+}
+
+.carousel-item {
+    height: 100vh;
+    min-height: 350px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-color: #000;
+}
+
+.redLetters {
+    color: $red;
+}
+
+.jumbotron {
+    padding: 0;
+    margin: 0;
+}
+
+.headerFooterItems {
+    display: inline-block;
+    color: $white;
+    vertical-align: middle;;
+    font-size: 20px;
+    padding: auto 15px;
 }
