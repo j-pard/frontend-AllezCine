@@ -65,12 +65,12 @@ body footer {
     body footer section#connect-us div div div#arrow-up {
       height: 60px;
       width: 60px;
+      padding-top: 10px;
       border: 3px solid #fc443C;
       border-radius: 50px; }
-      body footer section#connect-us div div div#arrow-up i {
-        color: #FFFFFF;
-        font-size: 50px;
-        font-weight: bold; }
+      body footer section#connect-us div div div#arrow-up img {
+        width: auto;
+        height: 70%; }
     body footer section#connect-us div div button {
       width: 45px;
       height: 45px;
