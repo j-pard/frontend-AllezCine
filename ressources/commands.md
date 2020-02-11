@@ -12,3 +12,8 @@ Gray        | #494D4E
 White       | #FFFFFF  
 Lightgray   | #F2F0F1  
 Youtube     | #FF0000
+Google      | #dd4b39
+Twitter     | #00acee
+Dribbble    | #EA4C89
+Facebook    | #3b5998
+LinkedIn    | #0e76a8
