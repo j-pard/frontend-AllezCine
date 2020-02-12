@@ -1,8 +1,15 @@
 ( () => {
+
+      // cookie
+
+      $('#cookieModal').modal('show');
+
+      // Movie gestion
+
       const TOP_MOVIES = document.getElementById("top-movies");
       const FEATURED_MOVIES = document.getElementById("featured-movies");
       const TEMPLATE = document.getElementById("template");
-      
+
       const KEY = "7f7e0630f2410d5c2d9f0a18fc195d27";
       let numberOfFeatured = 12;
 
