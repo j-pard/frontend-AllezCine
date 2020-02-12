@@ -5,6 +5,14 @@
       const TOP_MOVIES = document.getElementById("top-movies");
       const FEATURED_MOVIES = document.getElementById("featured-movies");
       const TEMPLATE = document.getElementById("template");
+      let moviesToCaroussel = [];
+      let slides = [
+            document.getElementById("slide1"),
+            document.getElementById("slide2"),
+            document.getElementById("slide3"),
+            document.getElementById("slide4"),
+            document.getElementById("slide5")
+      ];
 
       const KEY = "7f7e0630f2410d5c2d9f0a18fc195d27";
       let numberOfFeatured = 12;
@@ -19,7 +27,18 @@
             target.appendChild(affiche);
       }
 
-      const getMovies = async (url, number, target) => {
+      const createMovie = (source1, source2) => {
+            return {
+                  title: source1.title,
+                  backdrop: `https://image.tmdb.org/t/p/w400${source1.backdrop_path}`,
+                  poster: `https://image.tmdb.org/t/p/w400${source1.poster_path}`,
+                  genre: source1.genres[0].name,
+                  release: source1.release_date.split("-").splice(0, 1),
+                  trailer: `https://www.youtube.com/watch?v=${source2.results[0].key}`
+            }
+      }
+
+      const getMovies = async (url, number, target, addToCaroussel) => {
             const RESPONSE = await fetch(url);
             const DATA = await RESPONSE.json();
             const RESULTS = await DATA.results;
@@ -30,22 +49,18 @@
                   const DATA = await RESPONSE.json();
                   const VIDEO = await fetch(`http://api.themoviedb.org/3/movie/${movie.id}/videos?api_key=${KEY}`);
                   const VIDEO_DATA = await VIDEO.json();
-                  const TRAILER = `https://www.youtube.com/watch?v=${VIDEO_DATA.results[0].key}`;
-                  const MOVIE = {
-                        title: DATA.title,
-                        backdrop: `https://image.tmdb.org/t/p/w400${DATA.backdrop_path}`,
-                        poster: `https://image.tmdb.org/t/p/w400${DATA.poster_path}`,
-                        genre: DATA.genres[0].name,
-                        release: DATA.release_date.split("-").splice(0, 1),
-                        trailer: TRAILER
+                  const MOVIE = await createMovie(DATA, VIDEO_DATA);
+                  if(addToCaroussel) {
+                        moviesToCaroussel.push(MOVIE);
                   }
                   createArticle(target, MOVIE);
             });
       }
 
 
-      getMovies(`https://api.themoviedb.org/3/movie/popular?api_key=${KEY}`, 5, TOP_MOVIES);
-      getMovies(`https://api.themoviedb.org/3/trending/movie/week?api_key=${KEY}`, numberOfFeatured, FEATURED_MOVIES);
+      getMovies(`https://api.themoviedb.org/3/movie/popular?api_key=${KEY}`, 5, TOP_MOVIES, true);
+      
+      getMovies(`https://api.themoviedb.org/3/trending/movie/week?api_key=${KEY}`, numberOfFeatured, FEATURED_MOVIES, false);
 
       document.getElementById("btn-load-more").addEventListener("click", () => {
             FEATURED_MOVIES.innerHTML = "";
