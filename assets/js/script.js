@@ -5,7 +5,7 @@
       const TOP_MOVIES = document.getElementById("top-movies");
       const FEATURED_MOVIES = document.getElementById("featured-movies");
       const TEMPLATE = document.getElementById("template");
-      let moviesToCaroussel = [];
+      let activeSlide = 0;
       let slides = [
             document.getElementById("slide1"),
             document.getElementById("slide2"),
@@ -33,9 +33,16 @@
                   backdrop: `https://image.tmdb.org/t/p/w400${source1.backdrop_path}`,
                   poster: `https://image.tmdb.org/t/p/w400${source1.poster_path}`,
                   genre: source1.genres[0].name,
-                  release: source1.release_date.split("-").splice(0, 1),
+                  release: source1.release_date.split("-").splice(0, 1).join(""),
                   trailer: `https://www.youtube.com/watch?v=${source2.results[0].key}`
             }
+      }
+
+      const carousselConstruct = (film, position) => {
+            console.log(film);
+            console.log(slides[position]);
+            slides[position].querySelector("p.movie-title-inCar").textContent = film.title;
+            slides[position].querySelector("p a").setAttribute("href", film.trailer);
       }
 
       const getMovies = async (url, number, target, addToCaroussel) => {
@@ -49,9 +56,10 @@
                   const DATA = await RESPONSE.json();
                   const VIDEO = await fetch(`http://api.themoviedb.org/3/movie/${movie.id}/videos?api_key=${KEY}`);
                   const VIDEO_DATA = await VIDEO.json();
-                  const MOVIE = await createMovie(DATA, VIDEO_DATA);
+                  const MOVIE = createMovie(await DATA, await VIDEO_DATA);
                   if(addToCaroussel) {
-                        moviesToCaroussel.push(MOVIE);
+                        carousselConstruct(MOVIE, activeSlide);
+                        activeSlide++;
                   }
                   createArticle(target, MOVIE);
             });
