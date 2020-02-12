@@ -247,7 +247,7 @@ body {
         color: #dd4b39;
         border-color: #dd4b39; }
   body #arrow-up {
-    display: block;
+    display: none;
     position: fixed;
     bottom: 50px;
     right: 50px;
