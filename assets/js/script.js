@@ -67,7 +67,7 @@
       const JUMBOTRON = document.querySelector('.jumbotron');
       let jumbotronHeight =  JUMBOTRON.clientHeight  // pour trouver la hauteur d'un élément
       window.addEventListener('scroll', () => {
-            if(window.scrollY > jumbotronHeight){
+            if(window.scrollY > jumbotronHeight*0.75){
                   NAVIGATOR.classList.add('scroll');
             }
             else {
