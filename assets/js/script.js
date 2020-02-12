@@ -1,11 +1,5 @@
 ( () => {
 
-      // cookie
-
-      $('#cookieModal').modal('show');
-
-      // Movie gestion
-
       const TOP_MOVIES = document.getElementById("top-movies");
       const FEATURED_MOVIES = document.getElementById("featured-movies");
       const TEMPLATE = document.getElementById("template");
@@ -28,7 +22,7 @@
             const DATA = await RESPONSE.json();
             const RESULTS = await DATA.results;
             const RETURNED_MOVIES = RESULTS.splice(0, number);
-            
+
             RETURNED_MOVIES.forEach(async movie => {
                   const RESPONSE = await fetch(`https://api.themoviedb.org/3/movie/${movie.id}?api_key=${KEY}`);
                   const DATA = await RESPONSE.json();
@@ -63,6 +57,21 @@
                   document.getElementById("btn-load-more").textContent = "Load More";
                   getMovies(`https://api.themoviedb.org/3/trending/movie/week?api_key=${KEY}`, numberOfFeatured, FEATURED_MOVIES);
             }
-            
+
       });
+
+
+      // Nav animation
+
+      const NAVIGATOR = document.querySelector('.navbar');
+      const JUMBOTRON = document.querySelector('.jumbotron');
+      let jumbotronHeight =  JUMBOTRON.clientHeight  // pour trouver la hauteur d'un élément
+      window.addEventListener('scroll', () => {
+            if(window.scrollY > jumbotronHeight){
+                  NAVIGATOR.classList.add('scroll');
+            }
+            else {
+                  NAVIGATOR.classList.remove('scroll');
+            }
+      })
 })();

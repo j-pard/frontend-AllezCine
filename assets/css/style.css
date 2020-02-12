@@ -29,6 +29,7 @@ footer h4 {
   text-transform: uppercase;
   margin-bottom: 30px; }
 
+/* COOKIE */
 body #logo-top {
   font-size: 50px; }
 body #nav-search {
@@ -41,10 +42,11 @@ body #headerFooterList {
   list-style: none; }
 body #navigation-fixed {
   position: fixed;
-  background-color: none;
-  z-index: 9999; }
-body #slideOne {
-  background-image: url("./assets/ressources/54bf67b9a6ec145fc04eebc2481ba.jpeg"); }
+  z-index: 9999;
+  transition: all 0.25s ease-in-out; }
+body .navbar.scroll {
+  background-color: rgba(0, 0, 0, 0.7) !important;
+  padding: 0.5rem 1rem; }
 body .h2Header {
   font-size: 45px;
   text-transform: uppercase; }
