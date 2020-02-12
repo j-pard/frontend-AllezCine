@@ -31,7 +31,7 @@
       const createMovie = (source1, source2) => {
             return {
                   title: source1.title.split("(").splice(0, 1).join(""),
-                  backdrop: `https://image.tmdb.org/t/p/w400${source1.backdrop_path}`,
+                  backdrop: `https://image.tmdb.org/t/p/w1280/${source1.backdrop_path}`,
                   poster: `https://image.tmdb.org/t/p/w400${source1.poster_path}`,
                   genre: source1.genres[0].name,
                   release: source1.release_date.split("-").splice(0, 1).join(""),
@@ -42,8 +42,9 @@
       const carousselConstruct = (film, position) => {
             console.log(film);
             console.log(slides[position]);
-            slides[position].querySelector("p.movie-title-inCar").textContent = film.title;
-            slides[position].querySelector("p a").setAttribute("href", film.trailer);
+            slides[position].style.backgroundImage = `url("${film.backdrop}")`;
+            slides[position].querySelector("div div p.movie-title-inCar").textContent = film.title;
+            slides[position].querySelector("div div p a").setAttribute("href", film.trailer);
       }
 
       const getMovies = async (url, number, target, addToCaroussel) => {

@@ -59,11 +59,9 @@ body {
   body .carousel-item {
     height: 100vh;
     min-height: 350px;
-    background: no-repeat center center scroll;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
     background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     background-color: #000; }
   body .redLetters {
     color: #fc443C; }
@@ -151,7 +149,8 @@ body {
     height: 350px;
     display: flex;
     flex-direction: column;
-    box-shadow: 5px 5px 5px rgba(73, 77, 78, 0.6); }
+    box-shadow: 5px 5px 5px rgba(73, 77, 78, 0.6);
+    cursor: pointer; }
     body main .movie-container .affiche {
       width: 100%;
       height: 75%;
