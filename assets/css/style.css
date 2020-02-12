@@ -220,15 +220,6 @@ body {
       border-top: 2px solid #494D4E;
       margin-top: 50px;
       padding-top: 25px; }
-      body footer section#connect-us div div div#arrow-up {
-        height: 60px;
-        width: 60px;
-        padding-top: 10px;
-        border: 3px solid #fc443C;
-        border-radius: 50px; }
-        body footer section#connect-us div div div#arrow-up img {
-          width: auto;
-          height: 70%; }
       body footer section#connect-us div div button {
         width: 45px;
         height: 45px;
@@ -255,5 +246,21 @@ body {
       body footer section#connect-us div div #google-plus-btn:hover {
         color: #dd4b39;
         border-color: #dd4b39; }
+  body #arrow-up {
+    display: block;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    height: 60px;
+    width: 60px;
+    padding: 10px 10px 5px 10px;
+    border: 5px solid #fc443C;
+    border-radius: 50px;
+    background-color: rgba(0, 0, 0, 0.7);
+    cursor: pointer; }
+    body #arrow-up img {
+      width: 100%;
+      height: 80%;
+      margin: 0 auto; }
 
 /*# sourceMappingURL=style.css.map */

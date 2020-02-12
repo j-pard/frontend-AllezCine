@@ -305,17 +305,7 @@ body {
                   padding-top: 25px;
                   div {
                         div {
-                              div#arrow-up {
-                                    height: 60px;
-                                    width: 60px;
-                                    padding-top: 10px;
-                                    border: 3px solid $red;
-                                    border-radius: 50px;
-                                    img {
-                                          width: auto;
-                                          height: 70%;
-                                    }
-                              }
+                              
                               button {
                                     width: 45px;
                                     height: 45px;
@@ -356,5 +346,26 @@ body {
                   }
             }
 
+      }
+
+      #arrow-up {
+            display: block;
+            position: fixed;
+            bottom: 50px;
+            right: 50px;
+
+            height: 60px;
+            width: 60px;
+            padding: 10px 10px 5px 10px;
+            border: 5px solid $red;
+            border-radius: 50px;
+            background-color: rgba($color: #000000, $alpha: 0.7);
+
+            cursor: pointer;
+            img {
+                  width: 100%;
+                  height: 80%;
+                  margin: 0 auto;
+            }
       }
 }

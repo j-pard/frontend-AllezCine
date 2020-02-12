@@ -1,5 +1,7 @@
 ( () => {
 
+      // API
+
       const TOP_MOVIES = document.getElementById("top-movies");
       const FEATURED_MOVIES = document.getElementById("featured-movies");
       const TEMPLATE = document.getElementById("template");
@@ -61,6 +63,7 @@
       });
 
 
+
       // Nav animation
 
       const NAVIGATOR = document.querySelector('.navbar');
@@ -70,8 +73,35 @@
             if(window.scrollY > jumbotronHeight*0.75){
                   NAVIGATOR.classList.add('scroll');
             }
+            else if (window.scrollY > jumbotronHeight*0.1) {
+                  ARROW_UP.style.display = "block";
+            }
             else {
                   NAVIGATOR.classList.remove('scroll');
+                  ARROW_UP.style.display = "none";
             }
       })
+
+      // ARROW
+
+      const DIV = document.createElement("div");
+      const IMG = document.createElement("img");
+      DIV.setAttribute("id", "arrow-up");
+      IMG.setAttribute("src", "assets/img/up-arrow.png");
+      DIV.appendChild(IMG);
+      document.body.appendChild(DIV);
+      const ARROW_UP = document.getElementById("arrow-up");
+
+      ARROW_UP.addEventListener("click", () => {
+            scrollToTop();
+      });
+
+      const scrollToTop = () => {
+            const pos = document.documentElement.scrollTop || document.body.scrollTop;
+            if (pos > 0) {
+              window.requestAnimationFrame(scrollToTop);
+              window.scrollTo(0, pos - pos / 12); //Change this number for scroll speed (HIGH is FASTER)
+            }
+          };
+
 })();
