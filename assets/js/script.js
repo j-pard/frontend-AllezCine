@@ -4,6 +4,7 @@
 
       const TOP_MOVIES = document.getElementById("top-movies");
       const FEATURED_MOVIES = document.getElementById("featured-movies");
+      const SHOP = document.getElementById("shop-movies");
       const TEMPLATE = document.getElementById("template");
       let activeSlide = 0;
       let slides = [
@@ -15,7 +16,6 @@
       ];
 
       const KEY = "7f7e0630f2410d5c2d9f0a18fc195d27";
-      let numberOfFeatured = 12;
 
       const createArticle = (target, source) => {
             let affiche = document.importNode(TEMPLATE.content, true);
@@ -68,9 +68,10 @@
       }
 
 
-      getMovies(`https://api.themoviedb.org/3/movie/popular?api_key=${KEY}`, 5, TOP_MOVIES, true);
-      
-      getMovies(`https://api.themoviedb.org/3/trending/movie/week?api_key=${KEY}`, numberOfFeatured, FEATURED_MOVIES, false);
+      getMovies(`https://api.themoviedb.org/3/movie/popular?api_key=${KEY}`, 5, TOP_MOVIES, true); //TOP
+      getMovies(`https://api.themoviedb.org/3/trending/movie/week?api_key=${KEY}`, 12, FEATURED_MOVIES, false); //FEATURED
+      getMovies(`https://api.themoviedb.org/3/movie/now_playing?api_key=${KEY}&sort_by=release_date.desc`, 18, SHOP, false); //SHOP
+
 
       document.getElementById("btn-load-more").addEventListener("click", () => {
             FEATURED_MOVIES.innerHTML = "";
