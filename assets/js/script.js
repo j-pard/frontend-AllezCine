@@ -19,6 +19,7 @@
 
       const createArticle = (target, source) => {
             let affiche = document.importNode(TEMPLATE.content, true);
+            affiche.querySelector("article").setAttribute("trailer", source.trailer);
             affiche.querySelector("article div p").textContent = source.genre;
             affiche.querySelector("article div h4").textContent = source.title;
             affiche.querySelector("article div .year").textContent = source.release;
@@ -29,7 +30,7 @@
 
       const createMovie = (source1, source2) => {
             return {
-                  title: source1.title,
+                  title: source1.title.split("(").splice(0, 1).join(""),
                   backdrop: `https://image.tmdb.org/t/p/w400${source1.backdrop_path}`,
                   poster: `https://image.tmdb.org/t/p/w400${source1.poster_path}`,
                   genre: source1.genres[0].name,
