@@ -4,7 +4,10 @@
 @import "_colors.scss";
 @import "_headings.scss";
 
-/* COOKIE */
+
+* {
+      font-family: 'Oswald', sans-serif;
+}
 
 body {
       scroll-behavior: smooth;
@@ -164,7 +167,6 @@ body {
                   flex-direction: row;
                   flex-wrap: wrap;
                   align-items: center;
-                  // width: 1300px;
                   margin: 0 auto;
             }
 
@@ -187,6 +189,10 @@ body {
 
             section#featured-movies, section#shop-movies {
                   justify-content: center;
+            }
+
+            section#shop-movies {
+                  margin-bottom: 100px;
             }
 
             #btn-load-more {
@@ -378,5 +384,23 @@ body {
                   height: 80%;
                   margin: 0 auto;
             }
+      }
+
+      @media #{$small} {
+            #logo-top {
+                  display: none;
+            }
+            nav {
+                  max-width: max-content;
+            }
+            #socials {
+                  display: none;
+            }
+
+            #arrow-up {
+                  bottom: 20px;
+                  right: 20px;
+            }
+
       }
 }

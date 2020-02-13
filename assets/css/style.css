@@ -29,7 +29,9 @@ footer h4 {
   text-transform: uppercase;
   margin-bottom: 30px; }
 
-/* COOKIE */
+* {
+  font-family: 'Oswald', sans-serif; }
+
 body {
   scroll-behavior: smooth; }
   body #logo-top {
@@ -147,6 +149,8 @@ body {
     background-color: #F2F0F1; }
   body main section#featured-movies, body main section#shop-movies {
     justify-content: center; }
+  body main section#shop-movies {
+    margin-bottom: 100px; }
   body main #btn-load-more {
     width: 180px; }
   body main .movie-container {
@@ -269,5 +273,15 @@ body {
       width: 100%;
       height: 80%;
       margin: 0 auto; }
+  @media only screen and (max-width: 640px) {
+    body #logo-top {
+      display: none; }
+    body nav {
+      max-width: max-content; }
+    body #socials {
+      display: none; }
+    body #arrow-up {
+      bottom: 20px;
+      right: 20px; } }
 
 /*# sourceMappingURL=style.css.map */
