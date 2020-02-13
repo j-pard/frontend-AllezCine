@@ -130,7 +130,6 @@
       }
 })
 
-
       // CONTACT US CONFIRM
 
       document.getElementById('submitContact').addEventListener('click', (e)=> {

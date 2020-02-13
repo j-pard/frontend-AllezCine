@@ -16,6 +16,10 @@
       <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
       <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+      <!-- FONTS -->
+      <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+
       <title>ALLEZCINE!</title>
 </head>
 <body>
@@ -85,7 +89,7 @@
 
             <!-- carousel -->
 
-            <div id="carouselHeader" class="carousel slide" data-ride="carousel">
+            <div id="carouselHeader" class="carousel slide" data-ride="carousel" data-interval='2000'>
                   <ol class="carousel-indicators">
                         <li data-target="#carouselHeader" data-slide-to="0" class="active"></li>
                         <li data-target="#carouselHeader" data-slide-to="1"></li>
@@ -140,11 +144,11 @@
                               </div>
                         </div>
                   </div>
-                  <a class="carousel-control-prev" href="#carouselHeader" role="button" data-slide="prev">
+                  <a class="carousel-control-prev" href="#carouselHeader" role="button" data-slide="prev" >
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                         <span class="sr-only">Previous</span>
                   </a>
-                  <a class="carousel-control-next" href="#carouselHeader" role="button" data-slide="next">
+                  <a class="carousel-control-next" href="#carouselHeader" role="button" data-slide="next" data-interval='3000'>
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="sr-only">Next</span>
                   </a>
@@ -317,7 +321,11 @@
                               <input type="submit" class="col-3 mx-auto btn btn-default btn-login-submit btn-secondary btn-block m-t-md" value="Submit" id="submitContact" data-toggle="modal" data-target="#contactUsConfirm"/>
                         </div>
                   </form>
-
+                  <div class="row container-fluid">
+                        <div class="col-6 text-center pt-4">
+                              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2542.922389134041!2d4.43771681561412!3d50.40528397946919!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c226750391b893%3A0x38f706c7ffab5a0c!2sBeCode%20Charleroi!5e0!3m2!1sfr!2sbe!4v1581590022521!5m2!1sfr!2sbe" width="400" height="300" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                        </div>
+                  </div>
             <!-- CONTACT MODAL CONFIRMATION -->
 
             <div class="modal fade" id="contactUsConfirm" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -493,6 +501,5 @@
       </template>
 
       <script src="./assets/js/script.js"></script>
-
 </body>
 </html>
