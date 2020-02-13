@@ -113,14 +113,10 @@
             }
           };
 
-      const NAVIGATOR = document.querySelector('.navbar');
       const JUMBOTRON = document.querySelector('.jumbotron');
       let jumbotronHeight =  JUMBOTRON.clientHeight  // pour trouver la hauteur d'un élément
       window.addEventListener('scroll', () => {
-      if(window.scrollY > jumbotronHeight*0.75){
-            //NAVIGATOR.classList.add('scroll');
-      }
-      else if (window.scrollY > jumbotronHeight*0.1) {
+      if (window.scrollY > jumbotronHeight*0.1) {
             ARROW_UP.style.display = "block";
       }
       else {
@@ -128,6 +124,7 @@
             ARROW_UP.style.display = "none";
       }
 })
+
 
 
       // CONTACT US CONFIRM

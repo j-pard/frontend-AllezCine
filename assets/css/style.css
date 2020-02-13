@@ -52,8 +52,12 @@ body {
     transition: all 0.2s linear;
     font-size: 24px; }
   body .navbar {
+    position: fixed;
+    z-index: 9999;
+    transition: all 0.25s ease-in-out; }
+  body .navbar.scroll {
     background-color: rgba(0, 0, 0, 0.7) !important;
-    max-height: 10%; }
+    padding: 0.5rem 1rem; }
   body .h2Header {
     font-size: 45px;
     text-transform: uppercase; }

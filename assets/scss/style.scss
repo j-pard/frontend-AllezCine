@@ -41,8 +41,15 @@ body {
       }
 
       .navbar {
+            position: fixed;
+            z-index: 9999;
+            transition: all 0.25s ease-in-out;
+            //max-height: 10%;
+      }
+
+      .navbar.scroll {
             background-color: rgba($color: #000000, $alpha: 0.7)!important;
-            max-height: 10%;
+            padding: 0.5rem 1rem;
       }
 
         .h2Header {
