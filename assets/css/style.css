@@ -51,8 +51,9 @@ body {
     z-index: 9999;
     transition: all 0.2s linear;
     font-size: 24px; }
-  body .navbar.scroll {
-    background-color: rgba(0, 0, 0, 0.7) !important; }
+  body .navbar {
+    background-color: rgba(0, 0, 0, 0.7) !important;
+    max-height: 10%; }
   body .h2Header {
     font-size: 45px;
     text-transform: uppercase; }

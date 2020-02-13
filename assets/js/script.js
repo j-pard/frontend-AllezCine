@@ -92,25 +92,6 @@
       });
 
 
-
-      // Nav animation
-
-      const NAVIGATOR = document.querySelector('.navbar');
-      const JUMBOTRON = document.querySelector('.jumbotron');
-      let jumbotronHeight =  JUMBOTRON.clientHeight  // pour trouver la hauteur d'un élément
-      window.addEventListener('scroll', () => {
-            if(window.scrollY > jumbotronHeight*0.75){
-                  NAVIGATOR.classList.add('scroll');
-            }
-            else if (window.scrollY > jumbotronHeight*0.1) {
-                  ARROW_UP.style.display = "block";
-            }
-            else {
-                  NAVIGATOR.classList.remove('scroll');
-                  ARROW_UP.style.display = "none";
-            }
-      })
-
       // ARROW
 
       const DIV = document.createElement("div");
@@ -132,6 +113,22 @@
               window.scrollTo(0, pos - pos / 12); //Change this number for scroll speed (HIGH is FASTER)
             }
           };
+
+      const NAVIGATOR = document.querySelector('.navbar');
+      const JUMBOTRON = document.querySelector('.jumbotron');
+      let jumbotronHeight =  JUMBOTRON.clientHeight  // pour trouver la hauteur d'un élément
+      window.addEventListener('scroll', () => {
+      if(window.scrollY > jumbotronHeight*0.75){
+            //NAVIGATOR.classList.add('scroll');
+      }
+      else if (window.scrollY > jumbotronHeight*0.1) {
+            ARROW_UP.style.display = "block";
+      }
+      else {
+            //NAVIGATOR.classList.remove('scroll');
+            ARROW_UP.style.display = "none";
+      }
+})
 
 
       // CONTACT US CONFIRM
