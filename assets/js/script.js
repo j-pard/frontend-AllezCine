@@ -59,7 +59,7 @@
             RETURNED_MOVIES.forEach(async movie => {
                   const RESPONSE = await fetch(`https://api.themoviedb.org/3/movie/${movie.id}?api_key=${KEY}`);
                   const DATA = await RESPONSE.json();
-                  const VIDEO = await fetch(`http://api.themoviedb.org/3/movie/${movie.id}/videos?api_key=${KEY}`);
+                  const VIDEO = await fetch(`https://api.themoviedb.org/3/movie/${movie.id}/videos?api_key=${KEY}`);
                   const VIDEO_DATA = await VIDEO.json();
                   const MOVIE = createMovie(await DATA, await VIDEO_DATA);
                   if(addToCaroussel) {
