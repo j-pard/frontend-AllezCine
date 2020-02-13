@@ -1,4 +1,7 @@
 ( () => {
+      // cookie
+      $('#cookieModal').modal('show');
+
 
       // API
 
