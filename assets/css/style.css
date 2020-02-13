@@ -283,5 +283,7 @@ body {
     body #arrow-up {
       bottom: 20px;
       right: 20px; } }
+  body .not-displayed {
+    display: none; }
 
 /*# sourceMappingURL=style.css.map */
