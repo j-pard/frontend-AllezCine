@@ -231,7 +231,7 @@ body {
       border-top: 2px solid #494D4E;
       margin-top: 50px;
       padding-top: 25px; }
-      body footer section#connect-us div div button {
+      body footer section#connect-us div div a {
         width: 45px;
         height: 45px;
         background-color: transparent;
@@ -239,9 +239,9 @@ body {
         border: 1px solid #494D4E;
         font-size: 20px;
         margin: 2px;
-        transition: all .3s; }
-      body footer section#connect-us div div button:hover {
-        transform: scale(1.1); }
+        padding: 5px;
+        transition: all .3s;
+        cursor: pointer; }
       body footer section#connect-us div div #facebook-btn:hover {
         color: #3b5998;
         border-color: #3b5998; }

@@ -323,7 +323,7 @@ body {
                   div {
                         div {
                               
-                              button {
+                              a {
                                     width: 45px;
                                     height: 45px;
                                     background-color: transparent;
@@ -331,11 +331,9 @@ body {
                                     border: 1px solid $gray;
                                     font-size: 20px;
                                     margin: 2px;
+                                    padding: 5px;
                                     transition: all .3s;
-                              }
-
-                              button:hover {
-                                    transform: scale(1.1);
+                                    cursor: pointer;
                               }
 
                               #facebook-btn:hover {
