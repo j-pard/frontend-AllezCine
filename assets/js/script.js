@@ -22,12 +22,14 @@
 
       const createArticle = (target, source) => {
             let affiche = document.importNode(TEMPLATE.content, true);
-            affiche.querySelector("article").setAttribute("trailer", source.trailer);
-            affiche.querySelector("article div p").textContent = source.genre;
+            affiche.querySelector("article a p").textContent = source.genre;
             affiche.querySelector("article div h4").textContent = source.title;
             affiche.querySelector("article div .year").textContent = source.release;
             affiche.querySelector("article div .price").textContent = "";
-            affiche.querySelector(".affiche").style.backgroundImage = `url("${source.poster}")`;
+            affiche.querySelector("a").style.backgroundImage = `url("${source.poster}")`;
+            affiche.querySelector("a").setAttribute("href", source.trailer);
+            affiche.querySelector("a").setAttribute("target", "_blank");
+            affiche.querySelector("a").setAttribute("title", "Click to watch trailer");
             target.appendChild(affiche);
       }
 
@@ -38,13 +40,11 @@
                   poster: `https://image.tmdb.org/t/p/w400${source1.poster_path}`,
                   genre: source1.genres[0].name,
                   release: source1.release_date.split("-").splice(0, 1).join(""),
-                  trailer: `https://www.youtube.com/watch?v=${source2.results[0].key}`
+                  trailer: `https://www.youtube.com/watch?v=${source2.results[0].key}`,
             }
       }
 
       const carousselConstruct = (film, position) => {
-            console.log(film);
-            console.log(slides[position]);
             slides[position].style.backgroundImage = `url("${film.backdrop}")`;
             slides[position].querySelector("div div p.movie-title-inCar").textContent = film.title;
             slides[position].querySelector("div div p a").setAttribute("href", film.trailer);
@@ -69,7 +69,6 @@
                   createArticle(target, MOVIE);
             });
       }
-
 
       getMovies(`https://api.themoviedb.org/3/movie/popular?api_key=${KEY}`, 5, TOP_MOVIES, true); //TOP
       getMovies(`https://api.themoviedb.org/3/trending/movie/week?api_key=${KEY}`, 12, FEATURED_MOVIES, false); //FEATURED
@@ -146,4 +145,6 @@
             document.getElementById('commentContactConfirm').textContent = commentUser;
             e.preventDefault();
       })
+
+
 })();
