@@ -9,6 +9,7 @@
       const FEATURED_MOVIES = document.getElementById("featured-movies");
       const SHOP = document.getElementById("shop-movies");
       const TEMPLATE = document.getElementById("template");
+      let numberOfFeatured = 12;
       let activeSlide = 0;
       let slides = [
             document.getElementById("slide1"),
