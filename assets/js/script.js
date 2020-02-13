@@ -130,4 +130,20 @@
             }
           };
 
+
+      // CONTACT US CONFIRM
+
+      document.getElementById('submitContact').addEventListener('click', (e)=> {
+            let firstNameUser = document.getElementById('firstNameContact').value;
+            let lastNameUser = document.getElementById('lastNameContact').value;
+            let emailUser = document.getElementById('emailContact').value;
+            let subjectUser = document.getElementById('subjectContact').value;
+            let commentUser = document.getElementById('commentContact').value;
+            document.getElementById('firstNameContactConfirm').textContent = firstNameUser;
+            document.getElementById('lastNameContactConfirm').textContent = lastNameUser;
+            document.getElementById('emailContactConfirm').textContent = emailUser;
+            document.getElementById('subjectContactConfirm').textContent = subjectUser;
+            document.getElementById('commentContactConfirm').textContent = commentUser;
+            e.preventDefault();
+      })
 })();

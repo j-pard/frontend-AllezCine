@@ -287,7 +287,83 @@
             <h3 class="text-uppercase">Shop</h3>
             <section id="shop-movies" class="galleries col-10"></section>
 
-            <section id="contact-us"></section>
+            <!-- CONTACT -->
+
+            <section id="contact-us">
+
+                  <h3 class="text-uppercase mb-4">contact us</h3>
+
+                  <form class="container mx-auto pl-3 pr-3" action="">
+                        <div class="row">
+                              <div class="col-6 form-group">
+                                    <input value='' placeholder="First Name" type="text" class="form-control" required id="firstNameContact"/>
+                              </div>
+                              <div class=" col-6 form-group">
+                                    <input value='' placeholder="Last Name" type="text" class="form-control" required id="lastNameContact"/>
+                              </div>
+                        </div>
+                        <div class="row">
+                              <div class="col-6 form-group">
+                                    <input value='' placeholder="Email" type="mail" class="form-control" required id="emailContact"/>
+                              </div>
+                              <div class=" col-6 form-group">
+                                    <input value='' placeholder="Subject" type="text" class="form-control" required id="subjectContact"/>
+                              </div>
+                        </div>
+                        <div class="form-group">
+                              <textarea class="form-control" rows="5" placeholder="Your message" style="resize: none;" required id="commentContact"></textarea>
+                        </div>
+                        <div class="form-group">
+                              <input type="submit" class="col-3 mx-auto btn btn-default btn-login-submit btn-secondary btn-block m-t-md" value="Submit" id="submitContact" data-toggle="modal" data-target="#contactUsConfirm"/>
+                        </div>
+                  </form>
+
+            <!-- CONTACT MODAL CONFIRMATION -->
+
+            <div class="modal fade" id="contactUsConfirm" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                        <div class="modal-header">
+                              <h5 class="modal-title" id="loginTitle">Confirmation</h5>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                              </button>
+                        </div>
+                        <div class="modal-body">
+                              <form class="container mx-auto pl-3 pr-3" action="">
+                                    <div class="row">
+                                          <div class="col-6 form-group">
+                                                <label for="">First name:</label>
+                                                <p id="firstNameContactConfirm" disabled></p>
+                                          </div>
+                                          <div class=" col-6 form-group">
+                                                <label for="">Last name:</label>
+                                                <p id="lastNameContactConfirm" disabled></p>
+                                          </div>
+                                    </div>
+                                    <div class="row">
+                                          <div class="col-6 form-group">
+                                                <label for="">Email:</label>
+                                                <p id="emailContactConfirm" disabled></pid></p>
+                                          </div>
+                                          <div class=" col-6 form-group">
+                                                <label for="">Subject:</label>
+                                                <p id="subjectContactConfirm" disabled></p>
+                                          </div>
+                                    </div>
+                                    <div class="form-group">
+                                          <label for="">Your message:</label>
+                                          <textarea class="col-12 border border-dark rounded" id="commentContactConfirm" disabled style="resize: none;"></textarea>
+                                    </div>
+                                    <div class="form-group">
+                                          <input type="submit" class="col-3 mx-auto btn btn-default btn-login-submit btn-secondary btn-block m-t-md" value="Confirm" data-dismiss="modal" id="confirmationButton"/>
+                                    </div>
+                              </form>
+                        </div>
+                  </div>
+            </div>
+
+            </section>
       </main>
 
 
