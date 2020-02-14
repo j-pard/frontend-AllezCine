@@ -10,7 +10,9 @@
       const SHOP = document.getElementById("shop-movies");
       const TEMPLATE = document.getElementById("template");
       let numberOfFeatured = 12;
-      let activeSlide = 0;
+      let activeSlide = 0; //Caroussel position
+      let footLastActive = 0; //Footer latest movies position
+      let footPopActive = 0; //Footer latest movies position
       let slides = [
             document.getElementById("slide1"),
             document.getElementById("slide2"),
@@ -18,6 +20,20 @@
             document.getElementById("slide4"),
             document.getElementById("slide5")
       ];
+      const FOOT_LAST = [
+            document.getElementById("foot1"),
+            document.getElementById("foot2"),
+            document.getElementById("foot3"),
+            document.getElementById("foot4")
+      ];
+      const FOOT_POPULAR = [
+            document.getElementById("footPop1"),
+            document.getElementById("footPop2"),
+            document.getElementById("footPop3"),
+            document.getElementById("footPop4"),
+            document.getElementById("footPop5"),
+            document.getElementById("footPop6")
+      ]
 
       const KEY = "7f7e0630f2410d5c2d9f0a18fc195d27";
 
@@ -51,7 +67,16 @@
             slides[position].querySelector("div div p a").setAttribute("href", film.trailer);
       }
 
-      const getMovies = async (url, number, target, addToCaroussel) => {
+      const addFooterLast = (film, position) => {
+            FOOT_LAST[position].querySelector("img").setAttribute("src", film.backdrop);
+            FOOT_LAST[position].querySelector("p").innerHTML = film.title;
+      }
+
+      const addFootPop = (film, position) => {
+            FOOT_POPULAR[position].setAttribute("src", film.poster);
+      }
+
+      const getMovies = async (url, number, target, addToCaroussel, addToFooter, addFootPopular) => {
             const RESPONSE = await fetch(url);
             const DATA = await RESPONSE.json();
             const RESULTS = await DATA.results;
@@ -67,13 +92,25 @@
                         carousselConstruct(MOVIE, activeSlide);
                         activeSlide++;
                   }
-                  createArticle(target, MOVIE);
+                  else if(addToFooter) {
+                        addFooterLast(MOVIE, footLastActive);
+                        footLastActive++;
+                  }
+                  else if(addFootPopular) {
+                        addFootPop(MOVIE, footPopActive);
+                        footPopActive++;
+                  }
+                  else { // DONT CREATE ARTCLE WHEN FOOTER IS TARGETED
+                        createArticle(target, MOVIE);
+                  }
             });
       }
 
-      getMovies(`https://api.themoviedb.org/3/movie/popular?api_key=${KEY}`, 5, TOP_MOVIES, true); //TOP
-      getMovies(`//api.themoviedb.org/3/trending/movie/week?api_key=${KEY}`, 12, FEATURED_MOVIES, false); //FEATURED
-      getMovies(`https://api.themoviedb.org/3/movie/now_playing?api_key=${KEY}&sort_by=release_date.desc`, 18, SHOP, false); //SHOP
+      getMovies(`https://api.themoviedb.org/3/movie/popular?api_key=${KEY}`, 5, TOP_MOVIES, true, false, false); //TOP
+      getMovies(`https:///api.themoviedb.org/3/trending/movie/week?api_key=${KEY}`, 12, FEATURED_MOVIES, false, false, false); //FEATURED
+      getMovies(`https://api.themoviedb.org/3/movie/now_playing?api_key=${KEY}&sort_by=release_date.desc`, 18, SHOP, false, false, false); //SHOP
+      getMovies(`https://api.themoviedb.org/3/movie/now_playing?api_key=${KEY}&sort_by=release_date.desc`, 4, FOOT_LAST, false, true, false); //FOOTER LATEST
+      getMovies(`https://api.themoviedb.org/3/movie/popular?api_key=${KEY}`, 6, FOOT_POPULAR, false, false, true); //FOOTER POPULAR
 
 
       document.getElementById("btn-load-more").addEventListener("click", () => {

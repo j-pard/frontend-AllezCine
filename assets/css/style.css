@@ -211,11 +211,15 @@ body {
           list-style: none; }
           body footer section#footer-lists div.row div.col ul li {
             color: #494D4E; }
-        body footer section#footer-lists div.row div.col ul#footer-latest li img {
-          display: inline-block;
-          margin-right: 20px; }
-        body footer section#footer-lists div.row div.col ul#footer-latest li p {
-          display: inline-block; }
+        body footer section#footer-lists div.row div.col ul#footer-latest li {
+          cursor: default; }
+          body footer section#footer-lists div.row div.col ul#footer-latest li img {
+            display: inline-block;
+            margin-right: 20px;
+            width: 100px;
+            height: 50px; }
+          body footer section#footer-lists div.row div.col ul#footer-latest li p {
+            display: inline-block; }
         body footer section#footer-lists div.row div.col ul#footer-genres li {
           display: inline-block;
           color: #FFFFFF;
@@ -227,6 +231,9 @@ body {
           transition: all .3s; }
         body footer section#footer-lists div.row div.col ul#footer-genres li:hover {
           transform: scale(1.1); }
+        body footer section#footer-lists div.row div.col .footPops {
+          width: 80px;
+          height: 100px; }
     body footer section#connect-us {
       border-top: 2px solid #494D4E;
       margin-top: 50px;

@@ -286,9 +286,12 @@ body {
 
                               ul#footer-latest {
                                     li {
+                                          cursor: default;
                                           img {
                                                 display: inline-block;
                                                 margin-right: 20px;
+                                                width: 100px;
+                                                height: 50px;
                                           }
                                           p {
                                                 display: inline-block;
@@ -311,6 +314,11 @@ body {
                                     li:hover {
                                           transform: scale(1.1);
                                     }
+                              }
+
+                              .footPops {
+                                    width: 80px;
+                                    height: 100px;
                               }
                         }
                   }
