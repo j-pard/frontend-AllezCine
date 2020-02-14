@@ -288,35 +288,37 @@
                   <button id="btn-load-more" class="btn btn-lg btn-danger m-5 text-uppercase">Load more</button>
             </div>
 
+
             <h3 class="text-uppercase">Shop Movies</h3>
             <div id="shop-btns" class="pr-5">
-                  <button id="shop-prev" class="button btn-dark m-1 mb-2 p-1">Previous</button>
-                  <button id="shop-next" class="button btn-dark m-1 mb-2 p-1">Next</button>
+                  <button id="shop-prev" class="button btn-dark m-1 mb-2 p-1 shop-btn">Previous</button>
+                  <button id="shop-next" class="button btn-dark m-1 mb-2 p-1 shop-btn">Next</button>
             </div>
+
             <section id="shop" class="galleries row pr-5">
                   <h2 class="not-displayed">Semantic Heading</h2>
                   <div id="shop-movies" class="galleries col-12 col-md-7"></div>
                   <div id="shop-trailer" class="col-12 col-md-5 p-0">
-                        <iframe src="http://www.youtube.com/embed/el5FjZe_V8Q" frameborder="0"></iframe>
+                        <iframe id="trailer" src="http://www.youtube.com/embed/el5FjZe_V8Q" frameborder="0"></iframe>
                         <div id="trailer-details">
                               <div class="row">
-                                    <div class="col-12 title">This is a HIGH quality title</div>
+                                    <div id="trailer-title" class="col-12 title">This is a HIGH quality title</div>
                               </div>
                               <div class="row">
-                                    <div class="col-5 title">Story line :</div>
-                                    <div class="col-7 detail">This is a HIGH quality story line</div>
+                                    <div class="col-3 title">Story line :</div>
+                                    <div id="trailer-story" class="col detail">This is a HIGH quality story line</div>
                               </div>
                               <div class="row">
-                                    <div class="col-5 title">Release on :</div>
-                                    <div class="col-7 detail">This is a THE FUTUR</div>
+                                    <div class="col-3 title">Release on :</div>
+                                    <div id="trailer-date" class="col detail">This is a THE FUTUR</div>
                               </div>
                               <div class="row">
-                                    <div class="col-5 title">Genre :</div>
-                                    <div class="col-7 detail">This is a NOT RECOMMENDED genre</div>
+                                    <div class="col-3 title">Genre :</div>
+                                    <div id="trailer-genre" class="col detail">This is a NOT RECOMMENDED genre</div>
                               </div>
                               <div class="row">
-                                    <div class="col-5 title">Price :</div>
-                                    <div class="col-7 detail">EXPENSIVE</div>
+                                    <div class="col-3 title">Price :</div>
+                                    <div id="trailer-price" class="col detail">14,95€</div>
                               </div>
                         </div>
                   </div>
