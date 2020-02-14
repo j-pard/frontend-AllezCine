@@ -147,10 +147,22 @@ body {
     width: 100px; }
   body main div#btns-container button.btn-filter-off {
     background-color: #F2F0F1; }
-  body main section#featured-movies, body main section#shop-movies {
+  body main section#featured-movies {
     justify-content: center; }
-  body main section#shop-movies {
+  body main #shop {
+    justify-content: center;
+    flex-wrap: nowrap;
     margin-bottom: 100px; }
+  body main #shop-movies {
+    justify-content: center; }
+  body main #shop-trailer {
+    background-color: #222;
+    width: 100%;
+    height: 100%; }
+    body main #shop-trailer .title {
+      color: #fc443C; }
+    body main #shop-trailer .detail {
+      color: #494D4E; }
   body main #btn-load-more {
     width: 180px; }
   body main .movie-container {

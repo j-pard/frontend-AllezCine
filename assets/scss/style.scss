@@ -187,12 +187,30 @@ body {
                   }
             }
 
-            section#featured-movies, section#shop-movies {
+            section#featured-movies {
                   justify-content: center;
             }
 
-            section#shop-movies {
+            #shop {
+                  justify-content: center;
+                  flex-wrap: nowrap;
                   margin-bottom: 100px;
+            }
+
+            #shop-movies {
+                  justify-content: center;
+            }
+
+            #shop-trailer {
+                  background-color: #222;
+                  width: 100%;
+                  height: 100%;
+                  .title {
+                        color: $red;
+                  }
+                  .detail {
+                        color: $gray;
+                  }
             }
 
             #btn-load-more {

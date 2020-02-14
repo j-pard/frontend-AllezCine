@@ -100,15 +100,14 @@
                         addFootPop(MOVIE, footPopActive);
                         footPopActive++;
                   }
-                  else { // DONT CREATE ARTCLE WHEN FOOTER IS TARGETED
-                        createArticle(target, MOVIE);
-                  }
+                  // DONT CREATE ARTCLE WHEN FOOTER IS TARGETED
+                  createArticle(target, MOVIE);
             });
       }
 
       getMovies(`https://api.themoviedb.org/3/movie/popular?api_key=${KEY}`, 5, TOP_MOVIES, true, false, false); //TOP
       getMovies(`https:///api.themoviedb.org/3/trending/movie/week?api_key=${KEY}`, 12, FEATURED_MOVIES, false, false, false); //FEATURED
-      getMovies(`https://api.themoviedb.org/3/movie/now_playing?api_key=${KEY}&sort_by=release_date.desc`, 18, SHOP, false, false, false); //SHOP
+      getMovies(`https://api.themoviedb.org/3/movie/now_playing?api_key=${KEY}&sort_by=release_date.desc`, 8, SHOP, false, false, false); //SHOP
       getMovies(`https://api.themoviedb.org/3/movie/now_playing?api_key=${KEY}&sort_by=release_date.desc`, 4, FOOT_LAST, false, true, false); //FOOTER LATEST
       getMovies(`https://api.themoviedb.org/3/movie/popular?api_key=${KEY}`, 6, FOOT_POPULAR, false, false, true); //FOOTER POPULAR
 
