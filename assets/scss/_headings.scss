@@ -33,3 +33,11 @@ footer {
             margin-bottom: 30px;
       }
 }
+
+@media #{$small} {
+      main {
+            h3 {
+                  margin-left: 10px;
+            }
+      }
+}

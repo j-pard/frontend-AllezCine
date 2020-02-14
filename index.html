@@ -288,9 +288,40 @@
                   <button id="btn-load-more" class="btn btn-lg btn-danger m-5 text-uppercase">Load more</button>
             </div>
 
-            <h3 class="text-uppercase">Shop</h3>
-            <section id="shop-movies" class="galleries col-10">
+
+            <h3 class="text-uppercase">Shop Movies</h3>
+            <div id="shop-btns" class="pr-5">
+                  <button id="shop-prev" class="button btn-dark m-1 mb-2 p-1 shop-btn">Previous</button>
+                  <button id="shop-next" class="button btn-dark m-1 mb-2 p-1 shop-btn">Next</button>
+            </div>
+
+            <section id="shop" class="galleries row pr-5">
                   <h2 class="not-displayed">Semantic Heading</h2>
+                  <div id="shop-movies" class="galleries col-12 col-md-7"></div>
+                  <div id="shop-trailer" class="col-12 col-md-5 p-0">
+                        <iframe id="trailer" src="http://www.youtube.com/embed/el5FjZe_V8Q" frameborder="0"></iframe>
+                        <div id="trailer-details">
+                              <div class="row">
+                                    <div id="trailer-title" class="col-12 title">This is a HIGH quality title</div>
+                              </div>
+                              <div class="row">
+                                    <div class="col-3 title">Story line :</div>
+                                    <div id="trailer-story" class="col detail">This is a HIGH quality story line</div>
+                              </div>
+                              <div class="row">
+                                    <div class="col-3 title">Release on :</div>
+                                    <div id="trailer-date" class="col detail">This is a THE FUTUR</div>
+                              </div>
+                              <div class="row">
+                                    <div class="col-3 title">Genre :</div>
+                                    <div id="trailer-genre" class="col detail">This is a NOT RECOMMENDED genre</div>
+                              </div>
+                              <div class="row">
+                                    <div class="col-3 title">Price :</div>
+                                    <div id="trailer-price" class="col detail">14,95€</div>
+                              </div>
+                        </div>
+                  </div>
             </section>
 
             <!-- CONTACT -->
@@ -435,19 +466,19 @@
                         <div class="col">
                               <h4>Latest movies</h4>
                               <ul id="footer-latest">
-                                    <li class="mb-2">
+                                    <li class="mb-2 isFooter" id="foot1">
                                           <img src="https://via.placeholder.com/100X50" alt="" class="last-movie-img">
                                           <p>Film 1</p>
                                     </li>
-                                    <li class="mb-2">
+                                    <li class="mb-2 isFooter" id="foot2">
                                           <img src="https://via.placeholder.com/100X50" alt="" class="last-movie-img">
                                           <p>Film 2</p>
                                     </li>
-                                    <li class="mb-2">
+                                    <li class="mb-2 isFooter" id="foot3">
                                           <img src="https://via.placeholder.com/100X50" alt="" class="last-movie-img">
                                           <p>Film 3</p>
                                     </li>
-                                    <li>
+                                    <li class="mb-2 isFooter" id="foot4">
                                           <img src="https://via.placeholder.com/100X50" alt="" class="last-movie-img">
                                           <p>Film 4</p>
                                     </li>
@@ -456,14 +487,14 @@
                         <div class="col">
                               <h3 class="mb30"><span>ALLEZ</span>CINE!</h3>
                               <div class="row ml-1">
-                                    <img src="https://via.placeholder.com/80X100" alt="">
-                                    <img src="https://via.placeholder.com/80X100" alt="">
-                                    <img src="https://via.placeholder.com/80X100" alt="">
+                                    <img id="footPop1" class="footPops isFooter" src="https://via.placeholder.com/80X100" alt="">
+                                    <img id="footPop2" class="footPops isFooter" src="https://via.placeholder.com/80X100" alt="">
+                                    <img id="footPop3" class="footPops isFooter" src="https://via.placeholder.com/80X100" alt="">
                               </div>
                               <div class="row ml-1">
-                                    <img src="https://via.placeholder.com/80X100" alt="">
-                                    <img src="https://via.placeholder.com/80X100" alt="">
-                                    <img src="https://via.placeholder.com/80X100" alt="">
+                                    <img id="footPop4" class="footPops isFooter" src="https://via.placeholder.com/80X100" alt="">
+                                    <img id="footPop5" class="footPops isFooter" src="https://via.placeholder.com/80X100" alt="">
+                                    <img id="footPop6" class="footPops isFooter" src="https://via.placeholder.com/80X100" alt="">
                               </div>
                         </div>
                   </div>
