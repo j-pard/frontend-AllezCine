@@ -172,7 +172,8 @@ body {
     align-self: flex-start; }
     body main #shop-trailer iframe {
       width: 100%;
-      height: 450px; }
+      height: 450px;
+      border: none; }
     body main #shop-trailer #trailer-details {
       padding: 20px; }
     body main #shop-trailer .row {
