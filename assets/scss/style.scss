@@ -197,6 +197,16 @@ body {
                   font-size: 22px;
             }
 
+            #shop-btns {
+                  width: 100%;
+                  display: flex;
+                  flex-direction: row;
+                  justify-content: flex-end;
+                  button {
+                        width: 80px;
+                  }
+            }
+
             #shop-movies {
                   justify-content: center;
             }
@@ -441,6 +451,26 @@ body {
                   right: 20px;
             }
 
+            #shop {
+                  width: 100%;
+                  padding: 0 !important;
+            }
+
+            #shop-movies {
+                  order: 2;
+            }
+            #shop-btns {
+                  justify-content: center !important;
+                  margin: 10px auto !important;
+            }
+            #shop-trailer {
+                  order: 1;
+                  width: 100;
+            }
+            .movie-container {
+                  width: 100% !important;
+                  height: auto;
+            }
       }
 
       .not-displayed {
