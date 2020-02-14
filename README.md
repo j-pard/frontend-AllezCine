@@ -6,7 +6,7 @@ Créer un ONEPAGER en tant que projet front-end final - BeCode 02/2020
 Le projet consiste à recréer un site selon un [layout fourni](https://github.com/j-pard/frontend-AllezCine/blob/master/ressources/layout.jpg).    
 Nous utilisons l'API de [The Movie DB](https://www.themoviedb.org/) pour receuillir toutes les informations relatives aux films.  
   
-Durée du projet: 3,5 jours.
+Durée du projet: 5 jours.
 [Consignes](https://github.com/becodeorg/CRL-Keller-1-18/blob/master/Projects/3.AllezCine/readme.md)
 
 ## 2. Auteurs :
@@ -37,7 +37,9 @@ Durée du projet: 3,5 jours.
   * Pencil: Mock-Up fait en commun pour arranger la sémantique et distribuer les tâches.
 
 ## 5. Project Status :
-* Front-End est terminée à 90%. Certaines intérractions et fonctionnalités ne sont pas présentes car nous avons manqué de temps.  
+* Front-End est terminé pour une version fonctionnelle du site. Mais il est encore possible d'y ajouter des détails pour améliorer l'expérience utilisateur..  
 Il est prévu d'y revenir prochainement.  
   
 * Back-End: PHP et les bases de données ne font pas encore partie du projet. Les formulaires sont fictifs.
+
+* Divers: 

@@ -2,6 +2,19 @@
       // cookie
       $('#cookieModal').modal('show');
 
+      // anchor
+
+      let prevScrollpos = window.pageYOffset;
+      window.onscroll = function() {
+            let currentScrollPos = window.pageYOffset;
+            if (prevScrollpos > currentScrollPos) {
+                  document.getElementById("navigation-fixed").style.top = "0";
+            } else {
+                  document.getElementById("navigation-fixed").style.top = "-110px";
+            }
+            prevScrollpos = currentScrollPos;
+      }
+
 
       // API
 
