@@ -38,16 +38,22 @@
       const KEY = "7f7e0630f2410d5c2d9f0a18fc195d27";
 
       const createArticle = (target, source) => {
-            let affiche = document.importNode(TEMPLATE.content, true);
-            affiche.querySelector("article a p").textContent = source.genre;
-            affiche.querySelector("article div h4").textContent = source.title;
-            affiche.querySelector("article div .year").textContent = source.release;
-            affiche.querySelector("article div .price").textContent = "";
-            affiche.querySelector("a").style.backgroundImage = `url("${source.poster}")`;
-            affiche.querySelector("a").setAttribute("href", source.trailer);
-            affiche.querySelector("a").setAttribute("target", "_blank");
-            affiche.querySelector("a").setAttribute("title", "Click to watch trailer");
-            target.appendChild(affiche);
+            let isFooter;
+            Array.from(target).forEach(el => {
+                  isFooter = el.classList.contains("isFooter");
+            })
+            if(!isFooter) { // DONT CREATE ARTCLE WHEN FOOTER IS TARGETED
+                  let affiche = document.importNode(TEMPLATE.content, true);
+                  affiche.querySelector("article a p").textContent = source.genre;
+                  affiche.querySelector("article div h4").textContent = source.title;
+                  affiche.querySelector("article div .year").textContent = source.release;
+                  affiche.querySelector("article div .price").textContent = "";
+                  affiche.querySelector("a").style.backgroundImage = `url("${source.poster}")`;
+                  affiche.querySelector("a").setAttribute("href", source.trailer);
+                  affiche.querySelector("a").setAttribute("target", "_blank");
+                  affiche.querySelector("a").setAttribute("title", "Click to watch trailer");
+                  target.appendChild(affiche);
+            }
       }
 
       const createMovie = (source1, source2) => {
@@ -100,10 +106,12 @@
                         addFootPop(MOVIE, footPopActive);
                         footPopActive++;
                   }
-                  // DONT CREATE ARTCLE WHEN FOOTER IS TARGETED
                   createArticle(target, MOVIE);
             });
-      }
+      };
+
+
+      // RUNNING
 
       getMovies(`https://api.themoviedb.org/3/movie/popular?api_key=${KEY}`, 5, TOP_MOVIES, true, false, false); //TOP
       getMovies(`https:///api.themoviedb.org/3/trending/movie/week?api_key=${KEY}`, 12, FEATURED_MOVIES, false, false, false); //FEATURED
