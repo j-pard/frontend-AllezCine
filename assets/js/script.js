@@ -262,5 +262,10 @@
             e.preventDefault();
       });
 
+      //SHAME ON US
+
+      $('.navbar-collapse a').click(function(){
+            $(".navbar-collapse").collapse('hide');
+        });
 
 })();

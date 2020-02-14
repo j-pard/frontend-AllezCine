@@ -181,6 +181,8 @@ body {
       color: #fc443C; }
     body main #shop-trailer .detail {
       color: #494D4E; }
+    body main #shop-trailer #trailer-title {
+      font-size: 28px; }
   body main #btn-load-more {
     width: 180px; }
   body main .movie-container {
