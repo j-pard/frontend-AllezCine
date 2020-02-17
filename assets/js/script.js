@@ -123,7 +123,7 @@
       };
 
       const trailerUpdate = (position) => {
-            TRAILER.setAttribute("src", `http://www.youtube.com/embed/${shopTrailer[position].key}`);
+            TRAILER.setAttribute("src", `https://www.youtube.com/embed/${shopTrailer[position].key}`);
             document.getElementById("trailer-title").textContent = shopTrailer[position].title;
             document.getElementById("trailer-story").textContent = shopTrailer[position].story;
             document.getElementById("trailer-date").textContent = shopTrailer[position].release;
