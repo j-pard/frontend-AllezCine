@@ -93,7 +93,7 @@
             if(target == SHOP) {
                   addToTrailer(FILM);
                   if(shopTrailer.length == 1) {
-                        TRAILER.setAttribute("src", `http://www.youtube.com/embed/${FILM.key}`);
+                        TRAILER.setAttribute("src", `https://www.youtube.com/embed/${FILM.key}`);
                         document.getElementById("trailer-title").textContent = FILM.title;
                         document.getElementById("trailer-story").textContent = FILM.story;
                         document.getElementById("trailer-date").textContent = FILM.release;
